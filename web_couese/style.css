@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f1f5f8; /* page background */
+  color: #2f3e50;            /* main text */
+  line-height: 1.5;
+}
+
+  /* Site Header */
+
+.site-header {
+  background-color: #2f3e50; /* header & footer bg */
+  color: #ffffff;
+  padding: 24px 0;
+}
+
+.site-header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-header h1 {
+  margin-bottom: 12px;
+  font-size: 32px;
+}
+
+.banner {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+  /* Layout Container */
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 32px auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+}
+
+/* Stack to single column below 700px */
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+  /* Task Input (Flex) */
+
+.task-input {
+  grid-column: 1 / -1; /* full width */
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #6bb7c9;  /* accent */
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.task-input button {
+  padding: 12px 24px;
+  background-color: #6bb7c9;  /* accent */
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.task-input button:hover {
+  background-color: #58a1b0;  /* accent-hover */
+}
+
+/* Task List */
+
+.task-list h2,
+.task-table h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.task-list ul {
+  list-style: none;
+}
+
+.task-list li {
+  background-color: #ffffff;  /* panel bg */
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Table */
+
+.task-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;  /* panel bg */
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.task-table th,
+.task-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f8; /* page bg */
+}
+
+.task-table th {
+  background-color: #2f3e50; /* header/footer bg */
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.task-table tr:hover td {
+  background-color: #6bb7c9; /* accent */
+  color: #ffffff;
+}
+
+.delete-btn {
+  background: none;
+  border: 1px solid #7a8d9f; /* muted */
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #7a8d9f;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #7a8d9f;
+  color: #ffffff;
+  border-color: #7a8d9f;
+}
+
+/* Site Footer */
+
+.site-footer {
+  background-color: #2f3e50; /* header & footer bg */
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 32px;
+  font-size: 14px;
+}
