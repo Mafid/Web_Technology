@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Exchange | Academic Resources</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar-nav .nav-link {
+            color: rgb(77, 77, 77) !important;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #0077ff !important;
+        }
+        
+        .signup{
+            color: #fff;
+            background-color: rgb(75,163 ,227);
+            margin-left: 20px;
+        }
+        
+        .log{
+            border:1px solid rgb(235, 235, 235);
+            font-weight: 500;
+            
+        }
+        .log:hover {
+            background-color:#86d1f4;
+        }
+        
+        .nav-link{
+            margin-right: 20px;
+        }
+        
+        .navbar-brand{
+            font-weight: bold;
+        }
+        
+        .sii:hover{
+            background-color: #5096e1;
+            color: white;
+        }
+        .footer {
+      background-color: #1e293b; 
+      color: #cbd5e1;            
+    }
+    .footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #ffffff;
+    }
+    .footer .bi {
+      vertical-align: -.125em;
+    }
+    
+    .academic-header {
+      background-color: #03a9f4;
+    }
+    .upl{
+        background-color: #03a9f4;
+    }
+        
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="banner.png" alt="Campus Loop Logo" style="height: 40px;">
+            </a>
+            <a class="navbar-brand" href="#">Campus Loop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Exchange Items</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item ms-2">
+                        <a href="login.html" class="btn btn-login log">
+                            <i class="bi bi-person"></i> Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="signup.html" class="btn btn signup sii">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+        <!-- ... same as index.html ... -->
+    </nav>
+    <br><br><br>
+
+    <!-- Academic Hero Section -->
+    <section class="academic-header text-center text-white py-5">
+        <div class="container">
+          <h1 class="display-4 fw-bold">Academic Resources</h1>
+          <p class="lead mb-0">
+            Access and share question papers, notes, study guides and more to help with your courses.
+          </p>
+        </div>
+      </section>
+
+    <!-- Resources Categories -->
+    <section class="resource-categories py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 resource-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-primary bg-opacity-10 text-primary mb-3 mx-auto">
+                                <i class="fas fa-book fa-2x"></i>
+                            </div>
+                            <h5 class="card-title">Lecture Notes</h5>
+                            <p class="card-text">Notes from various courses shared by students.</p>
+                            <a href="#notes" class="btn btn-outline-primary">Browse Notes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 resource-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-primary bg-opacity-10 text-primary mb-3 mx-auto">
+                                <i class="fas fa-file-alt fa-2x"></i>
+                            </div>
+                            <h5 class="card-title">Past Papers</h5>
+                            <p class="card-text">Collection of previous exam papers with solutions.</p>
+                            <a href="#papers" class="btn btn-outline-primary">Browse Papers</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 resource-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-primary bg-opacity-10 text-primary mb-3 mx-auto">
+                                <i class="fas fa-laptop-code fa-2x"></i>
+                            </div>
+                            <h5 class="card-title">Online Courses</h5>
+                            <p class="card-text">Recommended online courses and tutorials.</p>
+                            <a href="#courses" class="btn btn-outline-primary">Browse Courses</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 resource-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-primary bg-opacity-10 text-primary mb-3 mx-auto">
+                                <i class="fas fa-graduation-cap fa-2x"></i>
+                            </div>
+                            <h5 class="card-title">Study Guides</h5>
+                            <p class="card-text">Study tips and guides for various subjects.</p>
+                            <a href="#guides" class="btn btn-outline-primary">Browse Guides</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notes Section -->
+    <section id="notes" class="notes-section py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Lecture Notes</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Computer Science 101</h5>
+                            <p class="card-text">Complete lecture notes for CS101 covering all topics from the semester.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Computer Science</span>
+                                <small class="text-muted">Uploaded: 2 weeks ago</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-sm btn-primary me-2">Download</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Calculus II</h5>
+                            <p class="card-text">Detailed notes with examples and practice problems for Calculus II.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Mathematics</span>
+                                <small class="text-muted">Uploaded: 1 month ago</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-sm btn-primary me-2">Download</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Organic Chemistry</h5>
+                            <p class="card-text">Color-coded notes with reaction mechanisms and diagrams.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Chemistry</span>
+                                <small class="text-muted">Uploaded: 3 weeks ago</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-sm btn-primary me-2">Download</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">View All Lecture Notes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Papers Section -->
+    <section id="papers" class="papers-section py-5">
+        <div class="container">
+            <h2 class="mb-4">Past Exam Papers</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Physics 2022 Final</h5>
+                            <p class="card-text">Final exam paper with model solutions from Spring 2022.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Physics</span>
+                                <small class="text-muted">Uploaded: 1 week ago</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-sm btn-primary me-2">Download</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Structures Midterm</h5>
+                            <p class="card-text">Midterm exam with solutions from Fall 2021.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Computer Science</span>
+                                <small class="text-muted">Uploaded: 2 weeks ago</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-sm btn-primary me-2">Download</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Microeconomics Final</h5>
+                            <p class="card-text">Complete final exam from 2020 with grading rubric.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Economics</span>
+                                <small class="text-muted">Uploaded: 3 days ago</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-sm btn-primary me-2">Download</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">View All Past Papers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Courses Section -->
+    <section id="courses" class="courses-section py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Recommended Online Courses</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/course1.jpg" class="img-fluid rounded-start h-100" alt="Course Image">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Introduction to Python</h5>
+                                    <p class="card-text">Free course covering Python basics from Coursera.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-primary">Programming</span>
+                                        <small class="text-muted">Free</small>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white">
+                                    <a href="#" class="btn btn-sm btn-primary">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/course2.jpg" class="img-fluid rounded-start h-100" alt="Course Image">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Machine Learning</h5>
+                                    <p class="card-text">Stanford's famous ML course by Andrew Ng.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-primary">AI</span>
+                                        <small class="text-muted">Free</small>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white">
+                                    <a href="#" class="btn btn-sm btn-primary">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/course3.jpg" class="img-fluid rounded-start h-100" alt="Course Image">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Financial Accounting</h5>
+                                    <p class="card-text">Comprehensive accounting course from edX.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-primary">Business</span>
+                                        <small class="text-muted">$49</small>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white">
+                                    <a href="#" class="btn btn-sm btn-primary">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/course4.jpg" class="img-fluid rounded-start h-100" alt="Course Image">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Digital Marketing</h5>
+                                    <p class="card-text">Google's digital marketing fundamentals course.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-primary">Marketing</span>
+                                        <small class="text-muted">Free</small>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white">
+                                    <a href="#" class="btn btn-sm btn-primary">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">View All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Guides Section -->
+    <section id="guides" class="guides-section py-5">
+        <div class="container">
+            <h2 class="mb-4">Study Guides & Tips</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Effective Note-Taking</h5>
+                            <p class="card-text">Guide to the Cornell note-taking system and other methods.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Study Skills</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-sm btn-primary">Read Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Exam Preparation</h5>
+                            <p class="card-text">Strategies for effective exam preparation and stress management.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Study Skills</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-sm btn-primary">Read Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Time Management</h5>
+                            <p class="card-text">Tips for balancing coursework, extracurriculars, and personal life.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Productivity</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-sm btn-primary">Read Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Research Paper Writing</h5>
+                            <p class="card-text">Step-by-step guide to writing academic research papers.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Writing</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-sm btn-primary">Read Guide</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">View All Guides</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Resources Section -->
+    <section class="upload-resources py-5  text-white upl">
+        <div class="container text-center">
+            <h2 class="mb-4">Share Your Resources</h2>
+            <p class="lead mb-5">Help your fellow students by sharing your notes, past papers, or other study materials.</p>
+            <button class="btn btn-light btn-lg">Upload Resources</button>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer py-5">
+        <div class="container">
+          <div class="row">
+            <!-- Brand & Social -->
+            <div class="col-md-3 mb-4">
+              <h5 class="text-white mb-3 fw-bold">
+                <i class="bi bi-book me-2 fs-4 fw-bold"></i>Campus Loop
+              </h5>
+              <p>
+                A platform for university students to exchange secondhand items and share academic resources.
+              </p>
+              <div>
+                <a href="#" class="me-3 fs-5"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="me-3 fs-5"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+              <h5 class="text-white mb-3 fw-semibold">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="#">Home</a></li>
+                <li class="mb-2"><a href="#">About Us</a></li>
+                <li class="mb-2"><a href="#">Exchange Items</a></li>
+                <li class="mb-2"><a href="#">Resources</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+    
+            <!-- Categories -->
+            <div class="col-md-3 mb-4">
+              <h5 class="text-white mb-3 fw-semibold">Categories</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="#">Books &amp; Textbooks</a></li>
+                <li class="mb-2"><a href="#">Electronics</a></li>
+                <li class="mb-2"><a href="#">Clothing</a></li>
+                <li><a href="#">Course Notes</a></li>
+              </ul>
+            </div>
+    
+            <!-- Contact -->
+            <div class="col-md-3 mb-4">
+              <h5 class="text-white mb-3 fw-semibold">Contact Us</h5>
+              <p class="mb-2">University Campus, Building 5</p>
+              <p class="mb-2">Email: <a href="mailto:info@campusloop.edu">info@campusloop.edu</a></p>
+              <p class="mb-0">Phone: (+08) 123-4567</p>
+            </div>
+          </div>
+    
+          <hr class="border-light">
+    
+          <p class="text-center mb-0">&copy; 2025 UniSwap. All rights reserved.</p>
+        </div>
+      </footer>
+        <!-- ... same as index.html ... -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

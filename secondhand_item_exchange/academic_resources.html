@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Academic Resources</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #f8f9fa;
+    }
+    .navbar-nav .nav-link {
+    color: #000 !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4895e8 !important;
+}
+.navbar{
+    padding-bottom: 10px;
+}
+.btn-primary {
+    background-color: #4895e8;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #f8f9fa;
+    border: 1px solid gray;
+    color: black;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(75,163 ,227);
+    color: #fff;
+}
+
+.header-section {
+  background-color: #03a9f4;
+  color: white;
+  text-align: center;
+}
+.search-btn{
+  background-color: #03a9f4;
+}
+    .nav-tabs .nav-link.active {
+      background-color: #e9ecef;
+      border-color: #dee2e6 #dee2e6 #fff;
+      color: #212529;
+    }
+
+    .resource-card {
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .resource-card img {
+      border-radius: 0.5rem;
+      object-fit: cover;
+      max-height: 150px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.25em 0.6em;
+      border-radius: 0.5rem;
+      color: #007bff;
+      background-color: #d6e4ff;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .downloads {
+      font-size: 0.85rem;
+      color: #6c757d;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+    .downloads svg {
+      width: 1rem;
+      height: 1rem;
+      fill: currentColor;
+    }
+    .resource-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+      flex-grow: 1;
+    }
+    .resource-subtitle {
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-bottom: 0.15rem;
+    }
+    .uploader-info {
+      font-size: 0.8rem;
+      color: #adb5bd;
+      margin-bottom: 1rem;
+    }
+    .btn-download {
+      background-color: #03a9f4;
+      border: none;
+      color: white;
+      font-weight: 600;
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .btn-download:hover {
+      background-color: #0b5ed7;
+      color: white;
+    }
+    .upload-section {
+      background: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
+    }
+    .upload-section p {
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #212529;
+    }
+    .btn-upload {
+      background-color: #03a9f4;
+      border: none;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      font-weight: 600;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .btn-upload:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    #resourceTabs{
+        color: #4895e8;
+    }
+    .custom-tabs {
+      background-color: #d8ecff; /* Light blue background */
+      border-radius: 12px;
+      padding: 6px;
+      display: inline-flex;
+      gap: 0.5rem;
+      user-select: none;
+    }
+
+    .custom-tabs .nav-link {
+      border-radius: 6px;
+      color: #6c7a8d; /* Muted dark blue text */
+      padding: 0.375rem 1.2rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .custom-tabs .nav-link.active {
+      background-color: white;
+      color: #4895e8; /* Bootstrap primary blue */
+      box-shadow: 0 2px 5px rgb(13 110 253 / 0.25);
+      font-weight: 700;
+    }
+
+    .custom-tabs .nav-link:hover:not(.active) {
+      background-color: #c6d9ff; /* Slight hover effect */
+      color: #4895e8;
+    }
+    .footer {
+      background-color: #1e293b; /* dark slate */
+      color: #cbd5e1;            /* light text */
+    }
+    .footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #03a9f4;
+    }
+    .footer .bi {
+      vertical-align: -.125em;
+    }
+  </style>
+</head>
+<body>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#">Campus Loop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Exchange Items</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        <li class="nav-item">
+                            <a href="#" class="btn btn signup">Sign Up</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a href="#" class="btn btn-login log">
+                                <i class="bi bi-person"></i> Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+  <!-- Header Section -->
+  <br><br><br>
+  <section class="header-section text-center text-white py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Academic Resources</h1>
+      <p class="lead mb-0">
+        Access and share question papers, notes, study guides and more to help with your courses.
+      </p>
+    </div>
+  </section>
+
+  <div class="container my-4">
+
+    <!-- Tabs -->
+    <ul class="nav custom-tabs" role="tablist" aria-label="Resource categories">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-selected="true">All</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="exam-papers-tab" data-bs-toggle="tab" data-bs-target="#exam-papers" type="button" role="tab" aria-selected="false">Exam Papers</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="notes-tab" data-bs-toggle="tab" data-bs-target="#notes" type="button" role="tab" aria-selected="false">Notes</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="study-guides-tab" data-bs-toggle="tab" data-bs-target="#study-guides" type="button" role="tab" aria-selected="false">Study Guides</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="other-tab" data-bs-toggle="tab" data-bs-target="#other" type="button" role="tab" aria-selected="false">Other</button>
+        </li>
+      </ul>
+
+    <!-- Search and Filters -->
+    <form class="row g-3 align-items-center mb-4" role="search" aria-label="Resource search and filters">
+      <div class="col-12 col-md-8">
+        <input type="search" class="form-control" placeholder="Search for resources..." aria-label="Search for resources" />
+      </div>
+      <div class="col-12 col-md-4 d-flex justify-content align-items-center gap-2">
+        <button type="submit" class="search-btn btn btn-primary d-flex align-items-center gap-1" aria-label="Search resources">
+          Search
+        </button>
+      </div>
+    </form>
+
+    <!-- Filter Dropdowns -->
+    <div class="row mb-5 filters-row" id="filtersSection">
+      <div class="col-12 col-md-6 mb-3 mb-md-0">
+        <label for="resourceTypeSelect" class="form-label fw-semibold">Resource Type</label>
+        <select id="resourceTypeSelect" class="form-select" aria-label="Select Resource Type">
+          <option selected>All Types</option>
+          <option>Lab Material</option>
+          <option>Course Material</option>
+          <option>Project Resource</option>
+          <option>Notes</option>
+          <option>Exam Paper</option>
+        </select>
+      </div>
+      <div class="col-12 col-md-6">
+        <label for="subjectSelect" class="form-label fw-semibold">Subject</label>
+        <select id="subjectSelect" class="form-select" aria-label="Select Subject">
+          <option selected>All Subjects</option>
+          <option>Chemistry</option>
+          <option>Finance</option>
+          <option>Computer Science</option>
+          <option>Mathematics</option>
+          <option>Physics</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Resources Available Section -->
+    <h5 class="mb-4">3 Resources Available</h5>
+
+    <div class="row g-4">
+      <!-- Resource Card 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="resource-card h-100" tabindex="0" aria-label="Organic Chemistry Lab Manual resource">
+          <img src="https://images.unsplash.com/photo-1612832021641-8b7ab9a06099?auto=format&fit=crop&w=600&q=80" alt="Molecular structure" />
+          <span class="tag" aria-label="Resource Type Lab Material">Lab Material</span>
+          <div class="downloads" aria-label="Number of downloads 156">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.5 9.9v2.6c0 .8.7 1.5 1.5 1.5h12c.8 0 1.5-.7 1.5-1.5v-2.6a.5.5 0 0 0-1 0v2.6a.5.5 0 0 1-.5.5h-12a.5.5 0 0 1-.5-.5v-2.6a.5.5 0 0 0-1 0z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+            156
+          </div>
+          <h6 class="resource-title">Organic Chemistry Lab Manual</h6>
+          <p class="resource-subtitle">Chemistry</p>
+          <p class="uploader-info">Uploaded by Chris M. on 18/02/2023</p>
+          <button type="button" class="btn-download" aria-label="Download Organic Chemistry Lab Manual">Download</button>
+        </article>
+      </div>
+
+      <!-- Resource Card 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="resource-card h-100" tabindex="0" aria-label="World Literature Reading List resource">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="Old literature books" />
+          <span class="tag" aria-label="Resource Type Course Material">Course Material</span>
+          <div class="downloads" aria-label="Number of downloads 132">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.5 9.9v2.6c0 .8.7 1.5 1.5 1.5h12c.8 0 1.5-.7 1.5-1.5v-2.6a.5.5 0 0 0-1 0v2.6a.5.5 0 0 1-.5.5h-12a.5.5 0 0 1-.5-.5v-2.6a.5.5 0 0 0-1 0z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+            132
+          </div>
+          <h6 class="resource-title">World Literature Reading List</h6>
+          <p class="resource-subtitle">Literature</p>
+          <p class="uploader-info">Uploaded by Morgan P. on 12/03/2023</p>
+          <button type="button" class="btn-download" aria-label="Download World Literature Reading List">Download</button>
+        </article>
+      </div>
+
+      <!-- Resource Card 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="resource-card h-100" tabindex="0" aria-label="Software Engineering Project Template resource">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Laptop with code on screen" />
+          <span class="tag" aria-label="Resource Type Project Resource">Project Resource</span>
+          <div class="downloads" aria-label="Number of downloads 264">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.5 9.9v2.6c0 .8.7 1.5 1.5 1.5h12c.8 0 1.5-.7 1.5-1.5v-2.6a.5.5 0 0 0-1 0v2.6a.5.5 0 0 1-.5.5h-12a.5.5 0 0 1-.5-.5v-2.6a.5.5 0 0 0-1 0z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+            264
+          </div>
+          <h6 class="resource-title">Software Engineering Project Template</h6>
+          <p class="resource-subtitle">Computer Science</p>
+          <p class="uploader-info">Uploaded by Drew K. on 01/05/2023</p>
+          <button type="button" class="btn-download" aria-label="Download Software Engineering Project Template">Download</button>
+        </article>
+      </div>
+    </div>
+
+    <!-- Upload Resource Section -->
+    <section class="upload-section mt-5" aria-label="Upload academic resources">
+      <h5>Have resources to share?</h5>
+      <p>Help fellow students by sharing your notes, past exam papers, study guides and other academic resources.</p>
+      <button type="button" class="btn-upload" aria-label="Upload Resource">Upload Resource</button>
+    </section>
+  </div>
+
+  <!-- Footer section -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Brand & Social -->
+        <div class="col-md-3 mb-4">
+          <h5 class="text-white mb-3 fw-bold">
+            <i class="bi bi-book me-2 fs-4 fw-bold"></i>Campus Loop
+          </h5>
+          <p>
+            A platform for university students to exchange secondhand items and share academic resources.
+          </p>
+          <div>
+            <a href="#" class="me-3 fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-3 fs-5"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-3 mb-4">
+          <h5 class="text-white mb-3 fw-semibold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#">Home</a></li>
+            <li class="mb-2"><a href="#">About Us</a></li>
+            <li class="mb-2"><a href="#">Exchange Items</a></li>
+            <li class="mb-2"><a href="#">Resources</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="col-md-3 mb-4">
+          <h5 class="text-white mb-3 fw-semibold">Categories</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#">Books &amp; Textbooks</a></li>
+            <li class="mb-2"><a href="#">Electronics</a></li>
+            <li class="mb-2"><a href="#">Clothing</a></li>
+            <li><a href="#">Course Notes</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3 mb-4">
+          <h5 class="text-white mb-3 fw-semibold">Contact Us</h5>
+          <p class="mb-2">University Campus, Building 5</p>
+          <p class="mb-2">Email: <a href="mailto:info@campusloop.edu">info@campusloop.edu</a></p>
+          <p class="mb-0">Phone: (+08) 123-4567</p>
+        </div>
+      </div>
+
+      <hr class="border-light">
+
+      <p class="text-center mb-0">&copy; 2025 Campus Loop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

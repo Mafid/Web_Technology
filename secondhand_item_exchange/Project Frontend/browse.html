@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Browse Items | Campus Loop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f8fb;
+    }
+    .page-title {
+      text-align: center;
+      margin: 30px 0;
+      color: navy;
+      font-weight: bold;
+    }
+    .search-bar {
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+    .item-card {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: none;
+      border-radius: 15px;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    .btn-buy {
+      background-color: #03a9f4;
+      color: white;
+      font-weight: 600;
+    }
+    .btn-buy:hover {
+      background-color: #009acd;
+    }
+
+    .navbar-nav .nav-link {
+            color: rgb(77, 77, 77) !important;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #0077ff !important;
+        }
+        
+        .signup{
+            color: #fff;
+            background-color: rgb(75,163 ,227);
+            margin-left: 20px;
+        }
+        
+        .log{
+            border:1px solid rgb(235, 235, 235);
+            font-weight: 500;
+            
+        }
+        .log:hover {
+            background-color:#86d1f4;
+        }
+        
+        .nav-link{
+            margin-right: 20px;
+        }
+        
+        .navbar-brand{
+            font-weight: bold;
+        }
+
+        .footer {
+      background-color: #1e293b; 
+      color: #cbd5e1;            
+    }
+    .footer a {
+      color: #b0b0b0;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #ffffff;
+    }
+    .footer .bi {
+      vertical-align: -.125em;
+    }
+    .page-title{
+        color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="banner.png" alt="Campus Loop Logo" style="height: 40px;">
+            </a>
+            <a class="navbar-brand" href="#">Campus Loop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Browse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Post Items</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item ms-2">
+                        <a href="login.html" class="btn btn-login log">
+                            <i class="bi bi-person"></i> Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="signup.html" class="btn btn signup sii">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<br><br><br>
+<div class="container">
+  <h2 class="page-title">Browse Items</h2>
+
+  <div class="search-bar mb-4">
+    <input type="text" id="searchInput" class="form-control" placeholder="Search items by title or category..." onkeyup="filterItems()">
+  </div>
+
+  <div class="row" id="itemList">
+
+    <!-- 📦 Item Card Example 1 -->
+    <div class="col-md-4 mb-4 item">
+      <div class="card item-card">
+        <img src="b2.jpg" class="card-img-top" alt="Book">
+        <div class="card-body">
+          <h5 class="card-title">GED Book</h5>
+          <p class="card-text"><strong>৳200</strong> — <span class="text-muted">Books | Good</span></p>
+          <p class="card-text">A good condition GED book, used for only one semester.</p>
+          <a href="#" class="btn btn-buy w-100">Contact Seller</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📦 Item Card Example 2 -->
+    <div class="col-md-4 mb-4 item">
+      <div class="card item-card">
+        <img src="b1.jpeg" class="card-img-top" alt="Electronics">
+        <div class="card-body">
+          <h5 class="card-title">Calculator</h5>
+          <p class="card-text"><strong>৳400</strong> — <span class="text-muted">Electronics | Like New</span></p>
+          <p class="card-text">A fresh Casio fx-991ES Plus calculator used for 8 months</p>
+          <a href="#" class="btn btn-buy w-100">Contact Seller</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📦 Item Card Example 3 -->
+    <div class="col-md-4 mb-4 item">
+      <div class="card item-card">
+        <img src="b3.jpeg" class="card-img-top" alt="Tools">
+        <div class="card-body">
+          <h5 class="card-title"> Chemistry Lab Coat</h5>
+          <p class="card-text"><strong>৳200</strong> — <span class="text-muted">Lab Tools | Used</span></p>
+          <p class="card-text">White lab coat, size medium, used in Chemistry lab.</p>
+          <a href="#" class="btn btn-buy w-100">Contact Seller</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more cards below like this -->
+
+  </div>
+</div>
+
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- First Column: Brand and Social Media -->
+                <div class="col-md-3 mb-4">
+                    <div class="brand">
+                        <i class="bi bi-book"></i> <!-- Book icon -->
+                        <span class="h4">Campus Loop</span>
+                    </div>
+                    <p class="pstyle">A platform for university students to exchange secondhand items and share academic resources.</p>
+                    <div class="social-icons">
+                        <a href="#" class="bi bi-facebook"></a>
+                        <a href="#" class="bi bi-twitter"></a>
+                        <a href="#" class="bi bi-instagram"></a>
+                    </div>
+                </div>
+
+                <!-- Second Column: Quick Links -->
+                <div class="col-md-3 mb-4 qlinks">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Browse</a></li>
+                        <li><a href="#">Post Items</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Third Column: Categories -->
+                <div class="col-md-3 mb-4 catagory">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Books</a></li>
+                        <li><a href="#">Lab Tools</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+
+                <!-- Fourth Column: Contact Information -->
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>University Campus, Academic Building</li>
+                        <li>Email: info@campusloop.edu</li>
+                        <li>Phone: 01997151571</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>©️ <span id="year"></span> Campus loop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+      document.getElementById('year').innerText = new Date().getFullYear();
+
+
+
+  function filterItems() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const items = document.querySelectorAll('.item');
+
+    items.forEach(item => {
+      const title = item.querySelector('.card-title').textContent.toLowerCase();
+      const category = item.querySelector('.card-text').textContent.toLowerCase();
+      if (title.includes(input) || category.includes(input)) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

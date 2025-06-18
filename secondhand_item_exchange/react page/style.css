@@ -1,0 +1,232 @@
+.hero-section {
+    padding: 100px 0;
+}
+
+.hero-heading {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-subheading {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.hero-image {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: #000 !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+.btn-primary {
+    background-color: #4895e8;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #f8f9fa;
+    border: 1px solid gray;
+    color: black;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(75,163 ,227);
+    color: #fff;
+}
+
+.signup{
+    color: #fff;
+    background-color: rgb(75,163 ,227);
+    font-weight: bold;
+}
+
+.log{
+    border:1px solid gray;
+    font-weight: bold;
+}
+.log:hover {
+    background-color:rgb(75,163 ,227);
+}
+
+.herocolor{
+    color: rgb(75,163 ,227);
+}
+.nav-link{
+    margin-right: 20px;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+.category-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-part{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0px 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.category-part h2{
+    font-weight: bold;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    font-size: 40px;
+    color: #4f83cc;
+    margin-bottom: 15px;
+}
+
+.category-title a{
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.category-card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 20px;
+    flex-wrap: nowrap; /* Ensure all cards stay in a single row */
+}
+
+.category-card-container .col {
+    flex: 1;
+    max-width: 23%; /* Ensure cards don't overflow */
+}
+
+.how-it-works-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.how-it-works-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+}
+.card-icon {
+    font-size: 50px;
+    color: #4f83cc;
+    margin-bottom: 20px;
+}
+.card-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+}
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+.join-section {
+    background-color: rgb(75, 163, 227); /* RGB color from previous analysis */
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+.join-section h2{
+    font-weight: bold;
+}
+.join-section .btn {
+    background-color: #ffffff;
+    color: rgb(75, 163, 227); /* Same blue as the background */
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.join-section .btn:hover {
+    background-color: rgb(75, 163, 227);
+    color: white;
+}
+.footer {
+    background-color: rgb(31, 41, 55);
+    color: white;
+    padding: 50px 0;
+}
+.footer a {
+    text-decoration: none;
+    color: #b0b0b0;
+}
+.footer a:hover {
+    color: rgba(75, 163, 227, 255); /* Primary color */
+}
+.footer .brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.pstyle{
+    color: #b0b0b0;
+}
+.footer .brand i {
+    font-size: 30px;
+    color: #4F46E5; /* Primary color */
+    margin-right: 10px;
+}
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.footer .social-icons a {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #b0b0b0;
+}
+.footer .social-icons a:hover {
+    color: rgba(75, 163, 227, 255);
+}
+.footer .footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-align: center;
+    color: #b0b0b0;
+}
+.list-unstyled{
+    color: #b0b0b0;
+}

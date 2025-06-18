@@ -1,0 +1,102 @@
+/* Reset & Base */
+* {
+    font-family: 'Lucida Grande', sans-serif;
+  }
+  body {
+    background-color: bisque;
+  }
+  .container {
+    padding-bottom: 20px;
+  }
+  
+  /* Hero & Navbar */
+  .first_part {
+    background: url('images/LMS.png') no-repeat center center/cover;
+    color: rgb(228,13,13);
+    height: 630px;
+  }
+  .Header-section {
+    background-image:
+      linear-gradient(0deg, rgba(21,26,26,0.2), #23080b),
+      url('images/LMS.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+  }
+  .navbar .nav-link {
+    color: #fff !important;
+  }
+  .bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: #141101 !important;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    margin-top: 150px;
+    background-color: #3d3d3fc4;
+    border-radius: 10px;
+    padding: 40px 0;
+  }
+  .search-bar input {
+    border-radius: 30px 0 0 30px;
+  }
+  .search-bar button {
+    border-radius: 0 30px 30px 0;
+  }
+  
+  /* Ask a Librarian */
+  .ask-librarian {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* Services Cards */
+  .service-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .service-section h2 {
+    margin-bottom: 30px;
+  }
+  .service-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  .service-card img {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+  
+  /* Trending Section */
+  .trend img {
+    height: 150px;
+  }
+  .trending-books h2 {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }

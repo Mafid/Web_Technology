@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Item Details{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/500x400?text=Calculus+Textbook" class="img-fluid rounded" alt="Calculus Textbook">
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="fw-bold">Calculus Textbook</h2>
+                            <p class="text-muted">Posted by JaneSmith • 2 days ago</p>
+                            <h4 class="text-primary my-3">$25.00</h4>
+                            <div class="mb-4">
+                                <span class="badge bg-success">Available</span>
+                                <span class="badge bg-secondary ms-2">Textbook</span>
+                            </div>
+                            <p class="card-text">Excellent condition, barely used with no markings. This is the latest edition used for MATH 101 and MATH 102 courses.</p>
+                            <div class="d-flex gap-2 mt-4">
+                                <button class="btn btn-primary flex-grow-1">Book This Item</button>
+                                <button class="btn btn-outline-secondary"><i class="bi bi-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Description</h5>
+                </div>
+                <div class="card-body">
+                    <p>This calculus textbook is in excellent condition with no highlighting or writing inside. It covers all the material needed for first-year calculus courses.</p>
+                    <p><strong>Details:</strong></p>
+                    <ul>
+                        <li>Title: Calculus: Early Transcendentals</li>
+                        <li>Author: James Stewart</li>
+                        <li>Edition: 8th Edition</li>
+                        <li>ISBN: 978-1285741550</li>
+                        <li>Condition: Like New</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Seller Information</h5>
+                </div>
+                <div class="card-body text-center">
+                    <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=0D6EFD&color=fff&size=100" 
+                         alt="JaneSmith" class="rounded-circle img-thumbnail mb-3">
+                    <h5>JaneSmith</h5>
+                    <p class="text-muted">Computer Science, 3rd Year</p>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary">View Profile</button>
+                        <button class="btn btn-outline-secondary">Send Message</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Safety Tips</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Meet in public places</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Inspect item before buying</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Don't share personal information</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Use secure payment methods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
